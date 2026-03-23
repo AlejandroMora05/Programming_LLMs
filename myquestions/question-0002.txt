@@ -1,0 +1,19 @@
+### **Pregunta 2 — Selección de variables por estabilidad en bootstrap**
+**El Problema:**  
+No quieres seleccionar variables solo una vez, porque puede ser inestable. Necesitas elegir variables que se repitan como importantes en múltiples remuestreos bootstrap.
+
+**Tu Misión:**  
+Escribe una función llamada `seleccionar_features_estables_bootstrap(X, y, n_iter=100, top_k=5, random_state=42)` que:
+
+1. Reciba `X` como DataFrame y `y` como array/serie.
+2. En cada iteración bootstrap:
+   - Re-muestree filas con reemplazo usando `numpy`.
+   - Entrene un `RandomForestClassifier` de `sklearn` con `random_state` controlado.
+   - Tome las `top_k` variables por `feature_importances_`.
+3. Cuente cuántas veces aparece cada variable en las `top_k`.
+4. Calcule una frecuencia relativa por variable: `conteo / n_iter`.
+5. Devuelva un DataFrame con:
+   - `feature`
+   - `conteo_top_k`
+   - `frecuencia`
+   ordenado de mayor a menor `frecuencia`.

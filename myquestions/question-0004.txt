@@ -1,0 +1,23 @@
+### **Pregunta 4 — Ranking de modelos por validación cruzada multi-métrica**
+**El Problema:**  
+Quieres comparar varios modelos de clasificación de forma justa, usando el mismo preprocesamiento y múltiples métricas en CV.
+
+**Tu Misión:**  
+Escribe una función llamada `ranking_modelos_cv(X, y, cv=5)` que:
+
+1. Reciba `X` (DataFrame numérico, puede tener NaN) e `y`.
+2. Defina un preprocesamiento común:
+   - `SimpleImputer(strategy="median")`
+   - `StandardScaler`
+3. Evalúe con `cross_validate` (sklearn) estos modelos:
+   - `LogisticRegression(max_iter=1000)`
+   - `RandomForestClassifier(random_state=42)`
+   - `SVC(probability=True, random_state=42)`
+4. Use métricas: `accuracy`, `f1`, `roc_auc`.
+5. Construya un DataFrame resumen con:
+   - `modelo`
+   - `acc_mean`
+   - `f1_mean`
+   - `auc_mean`
+   - `score_global` = promedio de esas 3 medias
+6. Devuelva el DataFrame ordenado por `score_global` descendente.

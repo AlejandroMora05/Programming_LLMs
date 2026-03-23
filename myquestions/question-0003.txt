@@ -1,0 +1,21 @@
+### **Pregunta 3 — Pipeline de texto + numérico con calibración de probabilidad**
+**El Problema:**  
+Tienes datos mixtos: texto de comentarios y variables numéricas. Además, quieres probabilidades bien calibradas (no solo clases).
+
+**Tu Misión:**  
+Escribe una función llamada `entrenar_modelo_calibrado_texto_numerico(df, text_col, num_cols, target_col, test_size=0.2, random_state=42)` que:
+
+1. Elimine filas con `target_col` nulo.
+2. Separe entrenamiento/prueba con `train_test_split` estratificado.
+3. Construya un `ColumnTransformer` que:
+   - Para `text_col`: use `TfidfVectorizer(max_features=300)`
+   - Para `num_cols`: use `SimpleImputer(strategy="median")` + `StandardScaler`
+4. Cree un pipeline base con clasificador `LogisticRegression(max_iter=1000)`.
+5. Calibre probabilidades con `CalibratedClassifierCV(method="sigmoid", cv=3)`.
+6. Evalúe en test:
+   - `roc_auc`
+   - `brier_score_loss`
+7. Devuelva un diccionario con:
+   - `roc_auc`
+   - `brier`
+   - `modelo_calibrado` (objeto entrenado).
