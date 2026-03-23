@@ -1,1 +1,5 @@
-# Programaci-n_LLMs
+# Programación_LLMs
+
+Alejandro Chavarria Mora
+
+a.chavarria@udea.edu.co
