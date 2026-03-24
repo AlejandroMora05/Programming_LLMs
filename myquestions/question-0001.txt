@@ -1,8 +1,7 @@
-### **Pregunta 1 — Detección de drift entre periodos (KS test + reporte)**
-**El Problema:**  
+El Problema:
 Tienes dos DataFrames de variables numéricas: uno histórico (`df_base`) y otro reciente (`df_nuevo`). Quieres detectar si cambió la distribución de las variables (data drift) para decidir si reentrenar el modelo.
 
-**Tu Misión:**  
+Tu Misión:
 Escribe una función llamada `detectar_drift_ks(df_base, df_nuevo, columnas, alpha=0.05)` que:
 
 1. Reciba dos DataFrames (`df_base`, `df_nuevo`) y una lista de columnas numéricas `columnas`.

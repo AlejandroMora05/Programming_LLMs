@@ -1,8 +1,7 @@
-### **Pregunta 4 — Ranking de modelos por validación cruzada multi-métrica**
-**El Problema:**  
+El Problema:  
 Quieres comparar varios modelos de clasificación de forma justa, usando el mismo preprocesamiento y múltiples métricas en CV.
 
-**Tu Misión:**  
+Tu Misión:  
 Escribe una función llamada `ranking_modelos_cv(X, y, cv=5)` que:
 
 1. Reciba `X` (DataFrame numérico, puede tener NaN) e `y`.

@@ -1,8 +1,7 @@
-### **Pregunta 3 — Pipeline de texto + numérico con calibración de probabilidad**
-**El Problema:**  
+El Problema:
 Tienes datos mixtos: texto de comentarios y variables numéricas. Además, quieres probabilidades bien calibradas (no solo clases).
 
-**Tu Misión:**  
+Tu Misión:
 Escribe una función llamada `entrenar_modelo_calibrado_texto_numerico(df, text_col, num_cols, target_col, test_size=0.2, random_state=42)` que:
 
 1. Elimine filas con `target_col` nulo.

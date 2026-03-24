@@ -69,7 +69,6 @@ def generar_caso_de_uso_ranking_modelos_cv():
     output = ranking_modelos_cv(**input)
     return input, output
 
-# Generamos un ejemplo
 if __name__ == "__main__":
     input, output = generar_caso_de_uso_ranking_modelos_cv()
     print(input)

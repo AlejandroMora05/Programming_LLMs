@@ -1,5 +1,5 @@
-# Programación_LLMs
+# Data science questions
 
-Alejandro Chavarria Mora
+student: Alejandro Chavarria Mora
 
-a.chavarria@udea.edu.co
+email: a.chavarria@udea.edu.co

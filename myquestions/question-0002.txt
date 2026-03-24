@@ -1,8 +1,7 @@
-### **Pregunta 2 — Selección de variables por estabilidad en bootstrap**
-**El Problema:**  
+El Problema:
 No quieres seleccionar variables solo una vez, porque puede ser inestable. Necesitas elegir variables que se repitan como importantes en múltiples remuestreos bootstrap.
 
-**Tu Misión:**  
+Tu Misión:
 Escribe una función llamada `seleccionar_features_estables_bootstrap(X, y, n_iter=100, top_k=5, random_state=42)` que:
 
 1. Reciba `X` como DataFrame y `y` como array/serie.
