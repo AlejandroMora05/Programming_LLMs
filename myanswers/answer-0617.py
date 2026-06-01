@@ -11,11 +11,9 @@ def transformar_datos(df):
 
     X = df.copy()
 
-    # Detectar columnas
     num_cols = X.select_dtypes(include=[np.number]).columns
-    cat_cols = X.select_dtypes(include=["object", "category", "bool"]).columns
+    cat_cols = X.select_dtypes(include=["object", "category", "bool", "string"]).columns
 
-    # Crear transformador
     transformer = ColumnTransformer(
         transformers=[
             ("num", StandardScaler(), num_cols),
